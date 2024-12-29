@@ -6,6 +6,11 @@ use App\Http\Controllers\HomeController;
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', [HomeController::class, 'home'])->name('home');
+    Route::get('/user/{user}',function () {
+	})->name('chat.user');
+	Route::get('/group/{user}',function () {
+	})->name('chat.group');
+	
 
 });
 

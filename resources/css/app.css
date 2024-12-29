@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.avatar.offline:before,
+.avatar.online:before {
+ width : 8px !important;
+ height : 8px !important;
+ top : 1% !important;
+ right : 1% !important;	
+}
