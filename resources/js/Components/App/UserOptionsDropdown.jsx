@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Fragment } from 'react'
 
 
-const UserOptionsDropdown = () => {
+const UserOptionsDropdown = ({conversation}) => {
 	const changeUserRole = () => {
 		if( conversation.is_user){
 			return ;
@@ -80,19 +80,19 @@ const UserOptionsDropdown = () => {
 								<button
 									onClick={changeUserRole}
 									className={`${
-										active ? 'bg-black/30 text-white-900' : 'text-gray-100'
+										active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
 									} group flex rounded-md items-center w-full px-2 py-2 text-sm`}
 									>
 										{ conversation.is_admin && (
 											<>
-											<UserIcon className="w-4 h-4 mr-2" />
+											<UserIcon className="w-4 h-4 mr-2 text-gray-500 " />
 												Make Regular User
 											</>
 										)}
 
 										{ !conversation.is_admin && (
 											<>
-												<ShieldCheckIcon className="w-4 h-4 mr-2" />
+												<ShieldCheckIcon className="w-4 h-4 mr-2 text-gray-500" />
 												Make Admin
 											</>
 										)}

@@ -8,7 +8,6 @@ const ChatLayout = ({ children }) => {
 	const page = usePage();
 
 	const { conversations, selectedConversations } = page.props
-    console.log('conversations', conversations);
 
     const [onlineUsers, setOnlineUsers] = useState({});
     const [localConversations, setLocalConversations] = useState([]);
@@ -83,7 +82,7 @@ const ChatLayout = ({ children }) => {
 
     return (
         <>
-        <div className="flex-1 w-full overflow-hidden"></div>
+        <div className="flex-1 w-full flex overflow-hidden">
             <div
              className={`transition-all w-full sm:w-[220px] md:w-[300px] bg-slate-800 flex flex-col overflow-hidden
                     ${
@@ -124,6 +123,7 @@ const ChatLayout = ({ children }) => {
             <div className="flex-1 flex flex-col overflow-hidden">
                 {children}
             </div>
+		</div>
         </>
     )
 };

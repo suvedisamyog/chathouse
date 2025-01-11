@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+#app {
+	height: 100vh;
+}
 .avatar.offline:before,
 .avatar.online:before {
  width : 8px !important;
